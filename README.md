@@ -34,6 +34,265 @@ Users should be able to:
 
 ## Exercise 1
 
+```bash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice
+$ git init
+Initialized empty Git repository in C:/Users/TheGym/Documents/TheGym-Tasks/Git-Exercice/.git/
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (master)
+$ git branch -M main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ touch README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git add README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git commit -m "feat: initialize readme of gym git exercise"
+[main (root-commit) 095f6ea] feat: initialize readme of gym git exercise
+ 1 file changed, 50 insertions(+)
+ create mode 100644 README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git remote add origin https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.42 KiB | 728.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      main -> main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git branch dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/dev
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      dev -> dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git branch test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git checkout test
+Switched to branch 'test'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (test)
+$ git push origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/test
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      test -> test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (test)
+$ git checkout dev
+Switched to branch 'dev'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git branch -d test
+Deleted branch test (was 095f6ea).
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Everything up-to-date
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin --delete test
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ - [deleted]         test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$
+```
+
+## Exercise 2
+
+```bash
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch home.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch about.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stah list
+git: 'stah' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{2}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (8fa6eca6de9e7074aa37b1f49c0ad9d47dfd603e)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped stash@{1} (07e1df371f33b313fba5ca054cd57211a28e8dea)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git commit -m "feat: exercice 2 deal with stash"
+[dev f363eb0] feat: exercice 2 deal with stash
+ 3 files changed, 28 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 2.63 KiB | 1.32 MiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   095f6ea..f363eb0  dev -> dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash apply
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git reset --hard
+HEAD is now at f363eb0 feat: exercice 2 deal with stash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$
+```
+
+# Bundle 2
+
+## Exercise 1
+
+```bash
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git branch ft/bundle-2
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$ touch services.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$ git add services.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$ git commit -m "feat: bundle-2 exercise 1"
+[ft/bundle-2 1c4afe2] feat: bundle-2 exercise 1
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 490 bytes | 245.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$
+```
+
 ## Author
 
 - Twitter - [@ibrahim_Bagalwa](https://twitter.com/ibrahim_Bagalwa)
