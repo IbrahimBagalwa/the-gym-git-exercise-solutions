@@ -124,6 +124,12 @@ TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
 $
 ```
 
+## Exercise 2
+
+```bash
+
+```
+
 ## Author
 
 - Twitter - [@ibrahim_Bagalwa](https://twitter.com/ibrahim_Bagalwa)
