@@ -127,7 +127,126 @@ $
 ## Exercise 2
 
 ```bash
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch home.html
 
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch about.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ touch team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stah list
+git: 'stah' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{2}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (8fa6eca6de9e7074aa37b1f49c0ad9d47dfd603e)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+stash@{1}: WIP on dev: 8ef3bf9 feat: add command for exercice 1
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Dropped stash@{1} (07e1df371f33b313fba5ca054cd57211a28e8dea)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git commit -m "feat: exercice 2 deal with stash"
+[dev f363eb0] feat: exercice 2 deal with stash
+ 3 files changed, 28 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 2.63 KiB | 1.32 MiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   095f6ea..f363eb0  dev -> dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git stash apply
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git reset --hard
+HEAD is now at f363eb0 feat: exercice 2 deal with stash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$
 ```
 
 ## Author
