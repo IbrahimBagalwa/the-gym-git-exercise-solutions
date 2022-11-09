@@ -34,6 +34,96 @@ Users should be able to:
 
 ## Exercise 1
 
+```bash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice
+$ git init
+Initialized empty Git repository in C:/Users/TheGym/Documents/TheGym-Tasks/Git-Exercice/.git/
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (master)
+$ git branch -M main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ touch README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git add README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git commit -m "feat: initialize readme of gym git exercise"
+[main (root-commit) 095f6ea] feat: initialize readme of gym git exercise
+ 1 file changed, 50 insertions(+)
+ create mode 100644 README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git remote add origin https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.42 KiB | 728.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      main -> main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git branch dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout dev
+Switched to branch 'dev'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/dev
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      dev -> dev
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git branch test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git checkout test
+Switched to branch 'test'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (test)
+$ git push origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/test
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      test -> test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (test)
+$ git checkout dev
+Switched to branch 'dev'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git branch -d test
+Deleted branch test (was 095f6ea).
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin dev
+Everything up-to-date
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$ git push origin --delete test
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ - [deleted]         test
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (dev)
+$
+```
+
 ## Author
 
 - Twitter - [@ibrahim_Bagalwa](https://twitter.com/ibrahim_Bagalwa)
