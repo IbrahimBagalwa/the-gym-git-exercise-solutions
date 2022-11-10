@@ -634,10 +634,82 @@ TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-pag
 $
 ```
 
-## Exercise 1
+## Exercise 2
 
 ```bash
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git branch ft/home-page-redesign
 
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git commit -m "feat:apply changes in home page"
+[main fa8f2cf] feat:apply changes in home page
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 583 bytes | 291.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   2a0801f..fa8f2cf  main -> main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git rebese main
+git: 'rebese' is not a git command. See 'git --help'.
+
+The most similar command is
+        rebase
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git commit -m "feat: redesign the home page"
+[ft/home-page-redesign 3c61333] feat: redesign the home page
+ 1 file changed, 2 insertions(+)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 6.15 KiB | 1.54 MiB/s, done.
+Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/home-page-redesign)
+$
 ```
 
 ## Author
