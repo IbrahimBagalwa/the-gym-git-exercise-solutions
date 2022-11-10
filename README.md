@@ -433,6 +433,213 @@ TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service
 $
 ```
 
+# Bundle 2
+
+## Exercise 1
+
+```bash
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git branch ft/team-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ touch team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git add team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git commit -m "feat: team page created"
+[ft/team-page 63301e3] feat: team page created
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 487 bytes | 243.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/team-page
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git branch ft/contact-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout main
+Already on 'main'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git log
+commit 63301e3294e7cc218d92eddf0134e6255264382d (HEAD -> ft/team-page, origin/ft/team-page)
+Author: IbrahimBagalwa <bagmurhulaibrahim@gmail.com>
+Date:   Thu Nov 10 10:45:53 2022 +0200
+
+    feat: team page created
+
+commit 84e352f3ffd75cccfa97df258675171d74878bc9 (origin/ft/service-redesign, ft/service-redesign)
+Merge: 900bf38 2a0801f
+Author: IbrahimBagalwa <bagmurhulaibrahim@gmail.com>
+Date:   Thu Nov 10 10:30:35 2022 +0200
+
+     fix: conflit has fixed succefully
+
+commit 2a0801f57b167c7382e096c9d95a65d9a9d55a68 (origin/main, main, ft/contact-page)
+Merge: 6e43016 ded7bb9
+Author: IbrahimBagalwa <bagmurhulaibrahim@gmail.com>
+Date:   Thu Nov 10 09:43:31 2022 +0200
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git cherry-pick 63301e3294e7cc218d92eddf0134e6255264382d101
+fatal: bad revision '63301e3294e7cc218d92eddf0134e6255264382d101'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git log --oneline
+63301e3 (HEAD -> ft/team-page, origin/ft/team-page) feat: team page created
+84e352f (origin/ft/service-redesign, ft/service-redesign)  fix: conflit has fixed succefully
+2a0801f (origin/main, main, ft/contact-page) Merge branch 'main' of https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions
+6e43016 feat: main services update
+900bf38 fix: services page
+ded7bb9 Merge pull request #1 from IbrahimBagalwa/ft/bundle-2
+00c991d (origin/ft/bundle-2, ft/bundle-2) feat add command for bundle2 exercice1 in readme file
+1c4afe2 feat: bundle-2 exercise 1
+fd9c7ed (origin/dev, dev) feat: bundle 1 done
+f363eb0 feat: exercice 2 deal with stash
+8ef3bf9 feat: add command for exercice 1
+095f6ea feat: initialize readme of gym git exercise
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git cherry-pick 63301e3
+[ft/contact-page 07a8f7a] feat: team page created
+ Date: Thu Nov 10 10:45:53 2022 +0200
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ touch contact.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git add contact.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git commit -m "feat: contact page"
+[ft/contact-page 6975f08] feat: contact page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 761 bytes | 380.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git branch ft/faq-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/contact-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+M       README.md
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ touch faq.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git commit -m "feat: faq page created"
+[ft/faq-page f73e6b7] feat: faq page created
+ 2 files changed, 152 insertions(+)
+ create mode 100644 faq.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.59 KiB | 813.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git revert 63301e3
+[ft/faq-page 862dc22] Revert "feat: team page created"
+ 1 file changed, 12 deletions(-)
+ delete mode 100644 team.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 283 bytes | 141.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   f73e6b7..862dc22  ft/faq-page -> ft/faq-page
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/faq-page)
+$
+```
+
+## Exercise 1
+
+```bash
+
+```
+
 ## Author
 
 - Twitter - [@ibrahim_Bagalwa](https://twitter.com/ibrahim_Bagalwa)
