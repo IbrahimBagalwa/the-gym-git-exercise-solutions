@@ -293,6 +293,146 @@ TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-
 $
 ```
 
+## Exercice 2
+
+```bash
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git pull origin ft/bundle-2
+From https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions
+ * branch            ft/bundle-2 -> FETCH_HEAD
+Updating 095f6ea..00c991d
+Fast-forward
+ README.md     | 259 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    |  12 +++
+ home.html     |  10 +++
+ services.html |  12 +++
+ 4 files changed, 293 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git branch ft/service-redesign
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git commit -m "fix: services page"
+[ft/service-redesign 900bf38] fix: services page
+ 1 file changed, 8 insertions(+)
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 515 bytes | 257.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git add .
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git commit -m "feat: main services update"
+[main 6e43016] feat: main services update
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+ $ git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 705 bytes | 352.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   ded7bb9..2a0801f  main -> main
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign|MERGING)
+$ git diff
+diff --cc services.html
+index 56bb237,0ee3f7e..0000000
+--- a/services.html
++++ b/services.html
+@@@ -7,13 -7,13 +7,23 @@@
+      <title>Git-Exercice</title>
+    </head>
+    <body>
+++<<<<<<< HEAD
+ +    <h1>Services</h1>
+ +    <div class="container">
+ +      <div class="content">
+ +        <div class="item">1</div>
+ +        <div class="item">2</div>
+ +        <div class="item">3</div>
+ +        <div class="item">4</div>
+++=======
++     <h1>Services main branch</h1>
++     <div class="container">
++       <div class="content">
++         <div class="item">item 1</div>
++         <div class="item">item 2</div>
++         <div class="item">item 3</div>
++         <div class="item">item 4</div>
+++>>>>>>> main
+        </div>
+      </div>
+    </body>
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign|MERGING)
+$ git add services.html
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign|MERGING)
+$ git commit -m " fix: conflit has fixed succefully"
+[ft/service-redesign 84e352f]  fix: conflit has fixed succefully
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 389 bytes | 194.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/IbrahimBagalwa/the-gym-git-exercise-solutions.git
+   900bf38..84e352f  ft/service-redesign -> ft/service-redesign
+
+TheGym@DESKTOP-8H0OS24 MINGW64 ~/Documents/TheGym-Tasks/Git-Exercice (ft/service-redesign)
+$
+```
+
 ## Author
 
 - Twitter - [@ibrahim_Bagalwa](https://twitter.com/ibrahim_Bagalwa)
