@@ -865,9 +865,9 @@ $
 
 ## Exercise 1
 
-```bash
+The public link visible to anyone is [HERE](https://ibrahimbagalwa.github.io/the-gym-git-exercise-solutions/)
 
-```
+![and screenshot of the process is here:](./gitimg.PNG)
 
 ## Author
 
